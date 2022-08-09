@@ -5,8 +5,8 @@ import {
   OrbitControls,
   OrthographicCamera,
 } from "@react-three/drei";
-import WavingUser from "./Wavinguser";
 import { angleToRadians } from "utils/angle";
+import WavingUser from "components/model/Wavinguser";
 
 const ThreeModelContainer = () => {
   const ref = useRef();

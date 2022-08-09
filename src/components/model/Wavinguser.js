@@ -19,7 +19,7 @@ export default function WavingUser(props) {
           name="Armature"
           rotation={[Math.PI / 2, 0, 0]}
           scale={0.02}
-          position={[0, -2.4, 0]}
+          position={[0, -2.2, 0]}
         >
           <primitive object={nodes.mixamorig7Hips} />
           <skinnedMesh
