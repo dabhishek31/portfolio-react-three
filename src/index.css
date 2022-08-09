@@ -16,6 +16,12 @@
   src: local("Jost"), url(./assets/fonts/Jost600Semi.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "Charmonman";
+  font-weight: 700;
+  src: local("Charmonman"), url(./assets/fonts/Charmonman-Bold.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
