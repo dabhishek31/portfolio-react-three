@@ -2,6 +2,22 @@ import styled from "styled-components";
 
 export const CustomDiv = styled.div`
   ${(props) => ({ ...props.customProps })};
+  @media only screen and (min-width: 960px) {
+    /* styles for browsers larger than 960px; */
+    ${(props) => ({ ...props.laptopProps })};
+  }
+  @media only screen and (min-width: 1440px) {
+    /* styles for browsers larger than 1440px; */
+    ${(props) => ({ ...props.desktopProps })};
+  }
+  @media only screen and (max-device-width: 480px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    ${(props) => ({ ...props.mobileProps })};
+  }
+  @media only screen and (device-width: 768px) {
+    /* default iPad screens */
+    ${(props) => ({ ...props.tabletProps })};
+  }
 `;
 
 export const Container = styled(CustomDiv)`
@@ -36,6 +52,10 @@ export const Row = styled(CustomDiv)`
   justify-content: ${(props) => props.justifyContent ?? "space-between"};
   @media only screen and (max-device-width: 480px) {
     flex-direction: ${(props) => (props.isResponsive ? "column" : "row")};
+    ${(props) => ({ ...props.mobileCss })}
+  }
+  @media only screen and (max-width: 768px) {
+    ${(props) => ({ ...props.tabletCss })}
   }
 `;
 

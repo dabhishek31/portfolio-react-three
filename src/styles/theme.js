@@ -5,10 +5,10 @@ const appTheme = {
     tertiaryColor: "#D9D9D9",
   },
   breakpoints: {
-    mobile: 480,
-    tablet: 768,
-    laptop: 960,
-    desktop: 1440,
+    mobile: () => "@media only screen and (max-device-width: 480px)",
+    tablet: () => "@media only screen and (max-device-width: 768px)",
+    laptop: () => "@media only screen and (max-device-width: 960px)",
+    desktop: () => "@media only screen and (max-device-width: 1440px)",
   },
   fontWeight: {
     w400: 400,
